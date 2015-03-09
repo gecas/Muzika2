@@ -1,0 +1,271 @@
+
+::selection { background: #a4dcec; }
+::-moz-selection { background: #a4dcec; }
+::-webkit-selection { background: #a4dcec; }
+
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: #ccc;
+  font-style: italic;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: #ccc;
+  font-style: italic;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #ccc;
+  font-style: italic;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: #ccc !important;
+  font-style: italic;  
+}
+
+br { display: block; line-height: 2.2em; } 
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+ol, ul { list-style: none; }
+
+input, textarea { 
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none; 
+}
+
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+strong { font-weight: bold; } 
+
+table { border-collapse: collapse; border-spacing: 0; }
+img { border: 0; max-width: 100%; }
+
+#topbar {
+  background: #4f4a41;
+  padding: 10px 0 10px 0;
+  text-align: center;
+  height: 36px;
+  overflow: hidden;
+}
+#topbar a {
+  color: #fff;
+  font-size:1.3em;
+  line-height: 1.25em;
+  text-decoration: none;
+  opacity: 0.5;
+  font-weight: bold;
+}
+#topbar a:hover {
+  opacity: 1;
+}
+
+/** typography **/
+
+
+/** page structure **/
+#w {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+ 
+}
+
+#content {
+  display: block;
+  width: 100%;
+  background: #fff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+
+
+/** audio player styles **/
+.audio-player, .audio-player div, .audio-player h2, .audio-player a, .audio-player span, .audio-player button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+div.audio-player {
+  position: relative;
+  width: 90%;
+  float: left;
+  height: 100%;
+  margin: 0 auto;
+  background: #4d5d6d;
+  left: 70px;
+  top:0px;
+
+}
+.audio-player h2 {
+  position: absolute;
+  bottom: 10px;
+  left: 0px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  width: 70%;
+  text-align: center;  
+}
+
+/* play/pause control */
+.mejs-controls .mejs-button button {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  text-indent: -9999px;
+}
+
+.mejs-controls .mejs-play button, .mejs-controls .mejs-pause button {
+  float: left;
+   background-image:url('../img/play.png');
+   height: 50px;
+   width: 70px;
+   left: -60px;
+   background-size: 50%;
+   margin-top: 8px;
+   background-repeat: no-repeat;
+   background-color:transparent;
+}
+.mejs-controls .mejs-pause button {  
+  height: 50px;
+  width: 70px;
+  background-size: 50%;
+  margin-top: 8px;
+  background-repeat: no-repeat;
+  background-color:transparent;
+  float: left;
+  background-image: url('../img/pause_2.png');}
+ 
+ 
+/* mute/unmute control */
+.mejs-controls .mejs-mute button, .mejs-controls .mejs-unmute button {
+  width: 30px;
+  height: 30px;
+  right:180px;
+  margin-top: 10px;
+  background-size: 100%;  
+  background-repeat: no-repeat;
+  background-color:transparent;
+  background-image:  url('../img/sound.png') ;
+}
+.mejs-controls .mejs-unmute button {
+  background-image:  url('../img/sound_2.png') ;
+}
+
+
+/* volume scrubber bar */
+.mejs-controls div.mejs-horizontal-volume-slider {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  cursor: pointer;
+}
+
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
+  width: 120px;
+  height: 7px;
+  background: #28282e;
+  border-radius: 3px; 
+}
+
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+  position: absolute;
+  width: 0;
+  height: 6px;
+  top: 1px;
+  left: 1px;
+  background: #c9cacf;
+  border-radius: 3px;
+
+}
+
+
+/* time scrubber bar */
+.mejs-controls div.mejs-time-rail { width: 380px; }
+ 
+.mejs-controls .mejs-time-rail span {
+  position: absolute;
+  display: block;
+  width: 380px;
+  height: 10px;
+  top: 20px;
+  left: 0px;
+  cursor: pointer;
+
+  
+}
+ 
+.mejs-controls .mejs-time-rail .mejs-time-total { 
+  background: #28282e; 
+  width: 600px !important; /* fixes display bug using jQuery 1.8+ */
+
+}
+
+.mejs-controls .mejs-time-rail .mejs-time-current {
+  top: 0;
+  left: 0;
+  width: 0; 
+  background: #c9cacf;
+
+}
+
+/* metallic sliders */
+.mejs-controls .mejs-time-rail .mejs-time-handle {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  top: -5px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image:  url('../img/handle.png') ;
+}
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-handle {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  top: -6.5px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image:  url('../img/handle.png') ;
+}
+
+
+/* time progress tooltip */
+.mejs-controls .mejs-time-rail .mejs-time-float {
+  position: absolute;
+  display: none;
+  width: 33px;
+  height: 23px;
+  top: -26px;
+  margin-left: -17px;
+  z-index: 9999;
+  
+}
+ 
+.mejs-controls .mejs-time-rail .mejs-time-float-current {
+  width: 33px;
+  display: block;
+  left: 0;
+  top: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #c9cacf;
+  text-align: right;
+  z-index: 9999;
+}
+
+/** clearfix **/
+.clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+.clearfix { display: inline-block; }
+ 
+html[xmlns] .clearfix { display: block; }
+* html .clearfix { height: 1%; }
+}
+
